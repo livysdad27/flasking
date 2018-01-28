@@ -1,0 +1,20 @@
+
+{% extends "bootstrap/base.html" %}
+{% block title %}Ask DadBot?{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <a href="/dbot">Ask Dadbot</a><br>
+  <a href="/convo">Train DadBot</a>
+</div>
+
+<div class="page-header">
+<form method="POST">
+  {{ form.hidden_tag() }}
+  {{ form.ask.label }} {{ form.ask() }}
+  {{ form.submit() }}
+</form>
+Dadbot Says:  {{ wisdom }}
+</div>
+
+{% endblock %}
